@@ -178,7 +178,7 @@ function create_zun_conf {
     iniset $ZUN_CONF DEFAULT container_driver $ZUN_DRIVER
     iniset $ZUN_CONF DEFAULT capsule_driver $ZUN_CAPSULE_DRIVER
     iniset $ZUN_CONF DEFAULT debug "$ENABLE_DEBUG_LOG_LEVEL"
-    iniset $ZUN_CONF docker docker_api_version "1.44"
+    iniset $ZUN_CONF docker docker_remote_api_version "1.44"
     if [[ $SERVICE_IP_VERSION == 6 ]]; then
         iniset $ZUN_CONF DEFAULT my_ip "$HOST_IPV6"
         iniset $ZUN_CONF docker docker_remote_api_host "$HOST_IPV6"
